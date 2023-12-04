@@ -59,6 +59,9 @@ Hal yang perlu diperhatikan
 ![VLSM-Tree-Jarkom-Modul-4-E11-2023](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/114993457/5c8fb7dc-f3ce-48e2-b507-303e64528920)
 
 ### Pembagian IP
+Berikut merupakan list pembagian IP yang didapat dari hasil pencarian menggunakan metode VLSM
+
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/114993457/101b33d7-5e65-4793-b7b5-b831525018da)
 
 ### Konfigurasi Network
 
