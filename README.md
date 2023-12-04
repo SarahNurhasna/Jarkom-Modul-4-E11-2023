@@ -16,6 +16,9 @@ Laporan resmi praktikum Jaringan Komputer modul 4 kelompok E11
 - [KENDALA](#kendala)
  
 # Soal
+
+![Screenshot 2023-11-28 235649](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/114993457/3325deec-d98b-4730-845d-49ac105e51a7)
+
 1. Soal shift dikerjakan pada Cisco Packet Tracer dan GNS3 menggunakan metode perhitungan CLASSLESS yang berbeda.
 Keterangan: Bila di CPT menggunakan VLSM, maka di GNS3 menggunakan CIDR atau sebaliknya
 2. Jika tidak ada pemberitahuan revisi soal dari asisten, berarti semua soal BERSIFAT BENAR dan DAPAT DIKERJAKAN.
