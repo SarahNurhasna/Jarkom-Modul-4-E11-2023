@@ -32,7 +32,7 @@ Hal yang perlu diperhatikan
 1. Gunakan prefix IP sesuai dengan prefix IP masing-masing.
 2. Terdapat template spreadsheet untuk mempermudah penilaian, gunakan template tersebut untuk melakukan penghitungan subnetting.
 3. Hasil perhitungan subnetting dan pohon pembagian IP serta file .pkt di submit pada link di atas.
-4. File yang didemokan adalah file .pkt yang telah disubmi5t
+4. File yang didemokan adalah file .pkt yang telah disubmit
 5. Pengurangan nilai akan dilakukan ketika:
    
    a. Melanggar salah satu dari tulisan diatas.
@@ -50,6 +50,17 @@ Hal yang perlu diperhatikan
 # Jawaban
 
 ## VLSM - GNS3
+### Topologi pada GNS3
+
+![VLSM-topologi](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/114993457/c3c1a81c-6fcc-4232-8c30-ce4ed253c452)
+
+### Tree VLSM
+
+![VLSM-Tree-Jarkom-Modul-4-E11-2023](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/114993457/5c8fb7dc-f3ce-48e2-b507-303e64528920)
+
+### Pembagian IP
+
+### Konfigurasi Network
 
 ## CIDR - CPT
 
