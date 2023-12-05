@@ -52,7 +52,7 @@ Hal yang perlu diperhatikan
 ## VLSM - GNS3
 ### Topologi pada GNS3
 
-![VLSM-topologi](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/114993457/c3c1a81c-6fcc-4232-8c30-ce4ed253c452)
+![VLSM-topologi](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/114993457/8d4cd376-0f8d-40aa-854d-57bc4ed09738)
 
 ### Tree VLSM
 
