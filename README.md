@@ -702,62 +702,137 @@ https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/114993457/d0e17a
 
 ![Topologi](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/729702ee-5b6c-42ce-927b-3f697c23d04d)
 
+1. Buka aplikasi Cisco Packet Tracer
+2. Login
+3. Drag node-node yang diperlukan
+4. Rename node
+5. Sambungkan masing-masing node sesuai ketentuan topologi pada soal
+6. Jika gagal menyambungkan, coba ganti colokan device
+   ![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/128a49fd-5e48-438c-9b7a-70be2e65c759)
+
 ### Subnetting dan Labelling
 
-(JELASIN TUTOR LABELLING DAN SUBNETTING)
+1. Tentukan subnet yang ada dalam topologi dan lakukan labelling netmask terhadap masing-masing subnet
+2. Gabungkan subnet paling dalam di topologi. Paling dalam berarti subnet yang paling jauh dari internet (gambar awan). Penggabungan hanya mencakup 2 subnet
+3. Setelah digabungkan, ulangi penggabungan sampai menjadi sebuah subnet besar yang mencakup 1 topologi yang dimiliki
+
+### Penghitungan Jumlah IP dan Netmask
+
+| Subnet | Rute                                             | Jumlah IP | Netmask |
+| ------ | ------------------------------------------------ | --------- | ------- |
+| A1     | Fern-Switch4-AppetitRegion-Switch4-LaubHills     | 1023      | /21     |
+| A2     | Flamme-Fern                                      | 2         | /30     |
+| A3     | Flamme-Switch5-RohrRoad                          | 1001      | /22     |
+| A4     | Flamme-Himmel                                    | 2         | /30     |
+| A5     | Himmel-Switch6-SchwerMountains                   | 6         | /29     |
+| A6     | Flamme-Frieren                                   | 2         | /30     |
+| A7     | Frieren-Switch3-LakeKorridor                     | 25        | /27     |
+| A8     | Frieren-Aura                                     | 2         | /30     |
+| A9     | Aura-Denken                                      | 2         | /30     |
+| A10    | Denken-Switch2-RoyalCapital-Switch2-WillieRegion | 127       | /24     |
+| A11    | Aura-Eisen                                       | 2         | /30     |
+| A12    | Eisen-Switch0-Stark                              | 2         | /30     |
+| A13    | Eisen-Switch1-Richter-Switch1-Revolte            | 3         | /29     |
+| A14    | Eisen-Linie                                      | 2         | /30     |
+| A15    | Linie-Lawine                                     | 2         | /30     |
+| A16    | Lawine-Switch7-BredtRegion-Heiter                | 31        | /26     |
+| A17    | Heiter-Switch8-Sein-Switch8-RiegelCanyon         | 512       | /22     |
+| A18    | Linie-Switch11-GranzChannel                      | 255       | /23     |
+| A19    | Eisen-Lugner                                     | 2         | /30     |
+| A20    | Lugner-Switch9-GrobeForest                       | 251       | /24     |
+| A21    | Lugner-Switch10-TurkRegion                       | 1001      | /22     |
+| Total  |                                                  | 4255      | /19     |
+
+1. Jumlah IP dihitung dengan cara menambahkan host dalam 1 subnet
+   - Misal subnet A1 (Fern-Switch4-AppetitRegion-Switch4-LaubHills)
+   - Jumlah IP = Host AppetitRegion + Host LaubHills + Router Fern
+   - Jumlah IP = 625 + 397 + 1
+   - Jumlah IP = 1023
+2. Jumlah IP subnet yang menghubungkan 2 router adalah 2 (Karena 1 + 1)
+3. Penghitungan netmask menggunakan tabel pada modul
+
+   ![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/e113d352-56ac-42bc-aa84-d0ba0c57f3e4)
+
+   - Misal subnet A1 dengan jumlah IP 1023
+   - Cari address yang mendekati 1023 (tidak boleh lebih)
+   - Netmask /22 memiliki address 1024
+   - Karena jarak antara 1023 dan 1024 terlalu sedikit maka menggunakan netmask yang lebih besar yaitu /21 yang memiliki address 2048
+
+### Penghitungan Netmask untuk Subnet yang digabungkan
+
+1. Penggabungan dari 2 subnet
+2. Cari yang memiliki netmask paling kecil
+3. Netmask akhir = netmask terkecil - 1
+   - Misal :
+   - Subnet B1 penggabungan dari A16 /26 dan A17 /22
+   - Pilih netmask /22
+   - Maka netmask akhir untuk B1 adalah /21
+
+### Hasil Subnetting
 
 #### A
 
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/e76d5f99-d991-4c1b-89d0-813121c72113)
 ![LABELLING-A](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/2b6d0905-f6ec-4859-91b9-0e8daf76609a)
 ![A](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/bd54a947-55df-4a64-872a-9bd486b08790)
 
 #### B
 
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/f4111aad-9bec-45e7-bd7a-047a0e36d036)
 ![LABELLING-B](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/a4776428-49b9-444f-9179-d51bc8476fd2)
 ![B](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/f99c0dd8-368b-452b-a170-0751a52c8b99)
 
 #### C
 
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/8e0c9b4d-93a6-4538-8472-11e7978762a8)
 ![LABELLING-C](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/e59c9100-66cd-4800-9932-bdeff604b249)
 ![C](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/40674d16-19fb-47e3-a2fb-40330576ee1c)
 
 #### D
 
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/d85f981f-a6a4-45a9-8a30-f6a8efb672d2)
 ![LABELLING-D](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/62a10bdd-c0c6-4b96-85ae-6870bddfdcad)
 ![D2](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/ac159a1e-8f6a-497b-952a-531c3aaea0ac)
 
 #### E
 
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/9b74c126-7adb-4d8b-890a-a822d10bd07a)
 ![LABELLING-E](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/3d8c7d8a-4ea9-4fcb-8918-1697415ac16c)
 ![E](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/fa0d5f66-8281-4a03-90fd-ee2c796a3fc3)
 
 #### F
 
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/0e0ac5a5-069d-4dec-8c6e-e25ba81b5447)
 ![LABELLING-F](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/fb7b8a0a-64c2-4bc5-ae7c-c5495e181b3e)
 ![F](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/282190b9-2a3e-41cb-be06-4bceab3a2e56)
 
 #### G
 
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/422beb59-a1bf-43e0-a28c-4d687a36bd8d)
 ![LABELLING-G](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/407dbf95-bffe-4e15-86b8-d526eb1bea89)
 ![G](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/ece68c26-23cf-4d2b-894a-d02a917e43a2)
 
 #### H
 
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/d10ccb0e-7d54-4f28-b199-7b0b3ceb85b4)
 ![LABELLING-H](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/f61d89d7-169d-4a62-b144-d4688f33952e)
 ![H](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/d28b6b92-31b5-4161-9178-09f48e851877)
 
 #### I
 
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/c7add32d-f225-46ac-9541-b9fee0e5201c)
 ![LABELLING-I](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/ab115f93-a4d7-4fcb-a47d-2a7525f72263)
 ![I](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/03776611-8865-47d0-8369-67e3ceaf6210)
 
 #### J
 
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/9b435029-2c1a-483b-be1c-f65316790d4f)
 ![LABELLING-J](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/fb73300f-7e25-4b7e-939f-cfa3bbbcfdc3)
 ![J](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/e3d0ab05-b566-4fb8-bd09-c979cbc39ae3)
 
 #### K
 
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/4506fe16-0f20-4205-bc7d-1dfec3caf0e4)
 ![LABELLING-K](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/5be846d7-e284-4f44-9a33-2398a1aa7d13)
 ![K](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/fc768c08-424c-4435-85a9-8241c02ceaf3)
 
@@ -765,6 +840,231 @@ https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/114993457/d0e17a
 
 ![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/ca205b7f-2283-4286-8c50-03f0c9d64e90)
 
+Pembuatan Tree menggunakan hasil dari penggabungan subnet
+
+### Penghitungan IP
+
+- Penghitungan IP mengacu pada tabel di modul
+- Misal
+  - J1 dengan netmask /15
+  - Pada tabel, netmask /15 memiliki 131072 Addresses
+  - Karena 10.42.0.0/15 sudah dipakai I1, maka harus ada penghitungan IP untuk J1
+  - 10.42.0.131072 = karena 131072 > 256 maka harus dibagi 256
+  - 131072 : 256 = 512
+  - Maka IP menjadi 10.42.512.0, karena 512 > 256 maka harus dibagi 256 lagi
+  - 512 : 256 = 2
+  - Maka IP menjadi 10.42(+2).0.0 = 10.44.0.0
+
+### Penghitungan Broadcast
+
+- Penghitungan Broadcast mengacu pada tabel di modul
+- Broadcast = NID + Wildcard + 1 bagian depannya
+- Misal
+  - A1 dengan NID 10.44.0.0 memiliki netmask /21
+  - Netmask /21 memiliki wildcard 0.0.7.255
+  - Broadcast = 10.44.0.0 + 0.0.7.255 + 1
+  - Broadcast = 10.45.7.255
+
+#### Hasil Penghitungan IP dan Broadcast
+
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/2bb1a4ef-6dbc-4798-8173-6c13543099cf)
+
+### Subnetting
+
+1. Masukkan IP Address dan Subnetmask untuk setiap link (FastEthernet dan Ethernet) yang terhubung
+2. IP Address tidak boleh menggunakan NID
+3. IP Address berdasarkan hasil subnet
+4. Subnetmask berdasarkan tabel pada modul
+5. Subnetting untuk client dilakukan dengan cara
+   - Masuk ke client
+   - Pilih tab Desktop
+   - Pilih IP Configuration
+
+#### Aura
+
+1. FastEthernet0/1
+
+   ![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/e35ed2ca-aaeb-4a22-ad46-3c9c78e6c83a)
+
+2. Ethernet1/0
+
+   ![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/168286c4-78c5-4844-b96d-e17860d1c251)
+
+3. Ethernet1/1
+
+   ![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/dd6cdf54-48ac-4ab9-ab93-6a9e51b0f4da)
+
+#### Frieren
+
+1. FastEthernet0/0
+
+   ![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/c7a4f960-2538-4208-8c29-7c5475a3d01b)
+
+2. FastEthernet0/1
+
+   ![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/1610beec-c2ba-42af-82e1-3e1942d37653)
+
+3. FastEthernet1/0
+
+   ![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/9bb5d062-8a62-478d-b3e9-ad4b3465aa01)
+
+#### LakeKorridor
+
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/3d846953-41ce-4077-aa98-9528114b7e9d)
+
+#### Flamme
+
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/25957b40-f1b2-4535-8414-4e280f8e76d4)
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/0eff8163-1f82-4232-8c19-145cd2168f0c)
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/a3f1a55f-4852-499d-a1da-ec92cf473558)
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/30806217-5866-44af-b139-a67cdb7894e2)
+
+#### Fern
+
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/93abcea6-6c56-479d-9f55-0b2f67e0da17)
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/65e2f08a-94df-4e99-a632-e93152920016)
+
+#### LaubHills
+
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/0bac170d-7d5d-4fc7-8351-5a99b7e91647)
+
+#### AppetitRegion
+
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/aa1fff15-2326-4fcb-9fd5-f2c6a775091d)
+
+#### RohrRoad
+
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/1e1173a7-b3c9-48f9-a28f-fc14e12155bd)
+
+#### Himmel
+
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/11a0cecd-c293-4ed9-9f1c-9530b1510b99)
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/2893d8c5-aa81-4914-ad9d-d0a9b6a6ca83)
+
+#### SchwerMountains
+
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/09910b1b-eacc-42d0-9fef-cf317e3942c0)
+
+#### Denken
+
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/17246243-b0e2-4c6b-858c-fcff0fba30b6)
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/c73a2ed5-8d2b-4dd3-b0e4-bf319a57b1be)
+
+#### RoyalCapital
+
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/9122ca97-33f7-44d8-8991-d2a56c07baf1)
+
+#### WillieRegion
+
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/0e97784d-f23c-4866-a976-dfbeeb39d2a4)
+
+### Routing
+
+#### Aura
+
+```bash
+10.45.0.0/24 via 10.45.1.2
+10.44.64.0/27 via 10.44.128.2
+10.44.32.0/30 via 10.44.128.2
+10.44.8.0/30 via 10.44.128.2
+10.44.0.0/21 via 10.44.128.2
+10.44.16.0/22 via 10.44.128.2
+10.44.20.8/30 via 10.44.128.2
+10.44.20.0/29 via 10.44.128.2
+10.42.64.0/29 via 10.43.0.2
+10.42.144.0/30 via 10.43.0.2
+10.42.136.0/30 via 10.43.0.2
+10.42.128.0/26 via 10.42.136.2
+10.42.123.0/24 via 10.42.136.2
+10.42.32.0/30 via 10.43.0.2
+10.42.8.0/30 via 10.42.32.2
+10.44.16.0/23 via 10.42.32.2
+10.42.4.0/26 via 10.42.8.2
+10.42.0.0/22 via 10.44.16.2
+```
+
+#### Frieren
+
+```bash
+0.0.0.0/0 via 192.177.128.1
+192.177.16.0/22 via 192.177.32.2
+192.177.8.0/30 via 192.177.32.2
+192.177.0.0/21 via 192.177.32.2
+192.177.20.8/30 via 192.177.32.2
+192.177.20.0/29 via 192.177.32.2
+```
+
+#### Flamme
+
+```bash
+0.0.0.0/0 via 192.177.32.1
+192.177.0.0/21 via 192.177.8.2
+192.177.20.0/29 via 192.177.20.10
+```
+
+#### Fern
+
+```bash
+0.0.0.0/0 via 192.177.8.1
+```
+
+#### Himmel
+
+```bash
+0.0.0.0/0 via 192.177.20.9
+```
+
+#### Denken
+
+```bash
+0.0.0.0/0 via 192.178.1.1
+```
+
+#### Eisen
+
+```bash
+0.0.0.0/0 via 192.176.0.1
+192.175.128.0/26 via 192.175.136.2
+192.175.123.0/24 via 192.175.136.2
+192.177.16.0/23 via 192.175.32.2
+192.175.8.0/23 via 192.175.32.2
+192.175.4.0/26 via 192.175.32.2
+192.175.0.0/22 via 192.175.32.2
+```
+
+#### Lugner
+
+```bash
+0.0.0.0/0 via 192.175.136.1
+```
+
+#### Linie
+
+```bash
+0.0.0.0/0 via 192.175.32.1
+192.175.4.0/26 via 192.175.8.2
+192.175.0.0/22 via 192.175.8.2
+```
+
+#### Lawine
+
+```bash
+0.0.0.0/0 via 192.175.8.1
+192.175.0.0/22 via 192.175.4.3
+```
+
+#### Heiter
+
+```bash
+0.0.0.0/0 via 192.175.4.1
+```
+
+# Testing Ping
+
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/e82a26db-ca2f-4cb1-9ed4-a7ffcdbaed55)
+
 # Kendala
 
-1. Kurang teliti dalam konfigurasi dan routing VLSM di GNS3 sehingga sempat ada node yang tidak bisa di ping
+- Kurang teliti dalam konfigurasi dan routing VLSM di GNS3 sehingga sempat ada node yang tidak bisa di ping
+- Typo saat subentting
+- Topologi terlalu rumit sehingga proses subnetting harus menggunakan bantuan tree subnet
