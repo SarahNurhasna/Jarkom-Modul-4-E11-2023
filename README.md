@@ -694,6 +694,8 @@ up route add -net 10.42.16.0 netmask 255.255.252.0 gw 10.42.7.122
 
 ### Testing
 
+https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/114993457/d0e17a9c-c153-454a-a1d6-694e9432fc59
+
 ## CIDR - CPT
 
 ### Topologi pada CPT
