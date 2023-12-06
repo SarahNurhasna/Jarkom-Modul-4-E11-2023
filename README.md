@@ -132,6 +132,6 @@ Berikut merupakan list pembagian IP yang didapat dari hasil pencarian menggunaka
 
 ### Tree CIDR
 
-![Tree](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/9f2d5495-f04b-4e07-b717-b3b3a6dc0010)
+![image](https://github.com/SarahNurhasna/Jarkom-Modul-4-E11-2023/assets/93377643/ca205b7f-2283-4286-8c50-03f0c9d64e90)
 
 # Kendala
